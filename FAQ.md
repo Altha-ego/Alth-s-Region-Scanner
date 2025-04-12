@@ -5,11 +5,11 @@ Frequently Asked Questions about the usage, behavior, and goals of the Alth’s 
 ---
 
 ## 🔍 What does this extension do?
-This tool scans supported Steam key storefronts (Fanatical, Humble Bundle, Green Man Gaming, GamersGate) to extract visible region restriction information. It formats the results as ISO 3166-1 alpha-2 country codes to assist in creating accurate SteamGifts giveaways.
+This tool scans supported Steam key storefronts (Fanatical, Humble Bundle, Green Man Gaming, GamersGate, GamesPlanet, DLGamer, Nuuvem, WinGameStore, and MacGameStore) to extract visible region restriction information. It formats the results as ISO 3166-1 alpha-2 country codes to assist in creating accurate SteamGifts giveaways.
 
 ---
 
-## 🌍 What are "allowed" and "blocked" regions?
+## 🌍 What are "allowed," "blocked," and "filtered" regions?
 - **Allowed regions**: Countries where a key can be activated.
 - **Blocked regions**: Countries where a key cannot be activated.
 - **Filtered regions**: Countries removed from the final output because SteamGifts does not currently support them.
@@ -17,66 +17,60 @@ This tool scans supported Steam key storefronts (Fanatical, Humble Bundle, Green
 ---
 
 ## 📦 Why are some countries filtered out?
-This extension filters unsupported codes from the output to prevent copy/paste errors when setting giveaway region restrictions using the TamperMonkey script provided by Lex. Filtered countries are still displayed for transparency.
+This extension filters unsupported ISO codes from the output to prevent copy/paste errors when setting giveaway region restrictions using the TamperMonkey script provided by Lex. Filtered countries are still displayed at the bottom of the output page with explanations.
 
 ---
 
 ## 🛒 How do I use the output?
-- Use the popup or hotkey (Ctrl+Shift+F) to scan a supported store page.
-- Copy the "Allowed" or "Blocked" region codes.
+- Use the popup, toolbar button, or hotkey (Ctrl+Shift+F) to scan a supported store page.
+- Open the region restriction lightbox if required (e.g., Fanatical, GamesPlanet).
+- Copy the "Allowed" or "Blocked" region ISO codes.
 - Paste the results into the SteamGifts Region Helper Tampermonkey script when creating a giveaway.
 
 ---
 
-## 🔄 Why are the results wrong on some Humble Bundle games?
-Humble displays region data using different phrasings like:
+## 🔄 Why are the results wrong on some games?
+Some stores use inconsistent or ambiguous phrasing, such as:
 - "This key is **only available** in..."
-- "This key is **not available** in..."
+- "This key **will not activate** in..."
 
-The extension determines logic based on these phrases, but inconsistencies or new formats may occasionally require updates. Report any issues found and I'll attempt to rectify them.
+The extension uses logic to interpret phrasing and infer whether a region list is a whitelist or blacklist. Unexpected formats may still appear and may require a patch. Please report them for review.
 
 ---
 
 ## 🧪 Can I use this with other stores like IndieGala?
-Currently, IndieGala and similar stores are not supported because they do not expose reliable or structured region restriction data that can be consistently parsed. 
-This doesn't exclude all stores however, I just need to find which stores can be added, and if IngieGala updates their format in the future, support for it could be added as well.
+Currently, IndieGala and similar stores are not supported due to the lack of reliably structured, visible region data.
+
+This does not rule out future support — if IndieGala updates its interface to clearly present this information in a consistent, parseable way, it can be added.
 
 ---
 
 ## 🕵️ Does this extension collect any data?
-
-No. This extension does not collect, transmit, or store any personal or usage data.
-
-It does not activate or interact with any websites beyond the specifically supported storefronts (Fanatical, Humble Bundle, Green Man Gaming, GamersGate). On unsupported sites or unscannable pages, it remains inactive.
+**No.** This extension:
+- Does not collect, transmit, or store any personal data.
+- Does not track your browsing activity.
+- Only activates on specifically supported storefront domains.
 
 ### 🛡️ Store-Specific Behavior
-
-For example, the extension is fully compatible with Fanatical and has received direct permission from the Fanatical team after internal testing or veiwing.
-
-To function correctly, the user must open the region info lightbox on a Fanatical product page — the extension only processes data that is already presented by the store in the DOM. It does not access anything hidden or backend-related.
-
-In this sense, the extension is only functional when access to region restriction data is already publicly visible and user-triggered.
-
+For example, Fanatical's region data must be manually opened by the user — the extension only reads data that is already in the DOM (on the page). It does not scrape or probe any private APIs or backend data. 
 
 ---
 
 ## 💬 Where can I ask questions or suggest features?
-Open an issue on the GitHub documentation repository or visit the SteamGifts discussion thread where the tool was originally introduced.
+- Open an issue on the [GitHub repository](https://github.com/Altha-ego/Alth-s-Region-Scanner)
+- Or post in the [SteamGifts discussion thread]() **Will add link to discussion thread when created**
 
 ---
 
 ## 🧠 Why did I create this tool?
-I created this as normally I have an Excel spreadsheet with information about my product keys that I haven't activated yet. This includes what store it's from, any regional restrictions, and more.
-I don't overly use steamDB to advise me of regional information details as it has proven wrong to me in the past. However this information is given to me by the stores, and so far, the store information hasn't cause issues or been incorrect.
+I originally tracked key data manually using Excel — noting region restrictions, supported stores, and matching ISO codes for SteamGifts giveaways. I later found Lex’s Tampermonkey script that automated region box entries on SteamGifts, so I built a converter formula in Excel to map country names to ISO codes.
 
-So I manually would write or type the restrictions onto either a notepad or the excel spreadsheet. This got annoying, so I found the script Lex created for the box to be added for Giveaways using country ISO codes.
-I then created a lookup table in my excel spreadsheet and a new column using a formula to change my countries listed in column A to output in column B converting things like Afghanistan, Australia to AF, AU.
+Eventually, I got sick of typing country names altogether — and this tool was born.
 
-Then I got sick of manually typing every country name. So, this tool was born. I'm lazy so I like to make things I do easier. Might take longer to begin with, but will save so much time in the end.
+It might take longer to develop, but in the long run, it saves *a lot* of time.
 
 ---
 
 ## 🙌 Credits
 - Created by **Althalus** for the SteamGifts community
-- For use with the **SteamGifts Region Helper** Tampermonkey script by Lex
-
+- For use with the **SteamGifts Region Helper** Tampermonkey script by **Lex**
