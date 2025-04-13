@@ -20,13 +20,27 @@ This audit helps evaluate which authorized Steam key retailers may be compatible
 | **Voidu**                  | ❌ No  | ✅ Yes (e.g. “ACTIVATES IN AU”)       | ❌ No (based on IP)       | ❌ Approximation Only   | Hidden modal in activation area checked. Does not contain region data despite region location. Shows “Activates in XX” by IP. Region must be inferred. Can't guarantee correct results. |
 | **IndieGala Store**        | ❌ No  | 🟡 Sometimes                          | ❌ No                     | ❌ Deferred             | Inconsistent and unreliable region data display. Displays by IP in Regions. Region must be inferred. Inconsistent with popup warning. |
 
+## 🔍 Under Review (Potential Future Support)
+
+| Store         | Supported Store | Region Info Visible | Structured Data | Feasibility | Notes |
+|---------------|-----------------|----------------------|------------------|-------------|-------|
+| **2Game**     | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Authorized reseller. Structure pending analysis. |
+| **Allyouplay**| 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Listed by publishers. Needs DOM structure review. |
+| **DreamGame** | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Confirmed authorized. Regional structure unknown. |
+| **Gamethor**  | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Legit but niche. Structure TBD. |
+| **JoyBuggy**  | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Denmark-based. DOM inspection required. |
+| **NotreGame** | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Known Czech distributor. Needs regional support inspection. |
+| **Playsum**   | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Confirmed as authorized. DOM review pending. |
+| **Startselect**| 🚧 Reviewing   | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Widely authorized. Pending DOM parsing feasibility check. |
+
 ---
 
 ## 🔍 Legend
 - ✅ Yes – Fully supported, easily parsed. **Capable Integration**
 - 🟡 Sometimes – Inconsistent regional information **Unable to guarantee accuracy**
 - ❌ No – Unsupported, unavailable, unreliable or unparsable regional information.
-- ⚠️ – Requires reviewing or testing.
+- ⚠️ – Warning or Notice
+- 🚧 - Review Required
 
 ---
 
