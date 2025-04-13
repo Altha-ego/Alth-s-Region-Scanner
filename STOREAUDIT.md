@@ -24,14 +24,13 @@ This audit helps evaluate which authorized Steam key retailers may be compatible
 
 | Store         | Supported Store | Region Info Visible | Structured Data | Feasibility | Notes |
 |---------------|-----------------|----------------------|------------------|-------------|-------|
-| **2Game**     | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Authorized reseller. Structure pending analysis. |
-| **Allyouplay**| 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Listed by publishers. Needs DOM structure review. |
-| **DreamGame** | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Confirmed authorized. Regional structure unknown. |
-| **Gamethor**  | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Legit but niche. Structure TBD. |
-| **JoyBuggy**  | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Denmark-based. DOM inspection required. |
-| **NotreGame** | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Known Czech distributor. Needs regional support inspection. |
-| **Playsum**   | 🚧 Reviewing    | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Confirmed as authorized. DOM review pending. |
-| **Startselect**| 🚧 Reviewing   | 🚧 Reviewing          | 🚧 Reviewing      | 🚧 Reviewing | Widely authorized. Pending DOM parsing feasibility check. |
+| **Gamethor**  | ⚠️ Possible     | ✅ Yes                       | ✅ Yes                    | ✅ Easy               | Legit but niche. Should be supportable - same lightbox as Fanatical |
+| **JoyBuggy**  | ⚠️ Possible     | ✅ Yes                       | ✅ Yes                    | ✅ Easy               | Denmark-based. Blacklist on mouse hover |
+| **Playsum**   | ⚠️ Possible     | ✅ Yes                       | ✅ Yes                    | ✅ Easy               | Confirmed as authorized. Should be supportable. Lightbox desgin similar to Fanatical. |
+| **2Game**     | ❌ No  | ✅ Yes (e.g. “ACTIVATES IN AU”)       | ❌ No (based on IP)       | ❌ Approximation Only | Authorized reseller. Shows “Activates in XX” by IP. Region must be inferred. Can't guarantee correct results.  |
+| **NotreGame** | ❌ No  | ✅ Yes (e.g. “ACTIVATES IN AU”)       | ❌ No (based on IP)       | ❌ Approximation Only | Known Czech distributor. Shows “Activates in XX” by IP. Region must be inferred. Can't guarantee correct results. |
+| **Allyouplay**| ❌ No  | ❌ No                                 | ❌ No                     | ❌ No                 | Listed by publishers. Doesn't display any regional information. No inferred capability. |
+| **DreamGame** | ❌ No  | ❌ No                                 | ❌ No                     | ❌ No                 | Confirmed authorized. Doesn't display any regional information. No inferred capability. |
 
 ---
 
